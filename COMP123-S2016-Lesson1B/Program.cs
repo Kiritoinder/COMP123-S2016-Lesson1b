@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Student ID: 300874118
  * Description: this is the lesson 1B for github
  * 
- * Version: 0.2 - Added GetUserName method
+ * Version: 0.3 - Updated comments for driver class program
  */
 
 
@@ -18,8 +18,20 @@ using System.Threading.Tasks;
 
 namespace COMP123_S2016_Lesson1B
 {
+    /**
+     * This is the driver class for our program
+     * 
+     * @class program
+     
+     */
     class Program
     {
+        /**
+         * Main method for class program
+         *
+         * @pram {string[]} args
+         * @constructor Main
+         */
         static void Main(string[] args)
         {
             GetUserName();
