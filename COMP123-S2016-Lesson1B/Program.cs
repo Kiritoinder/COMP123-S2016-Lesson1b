@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Student ID: 300874118
  * Description: this is the lesson 1B for github
  * 
- * Version: 0.3 - Updated comments for driver class program
+ * Version: 0.4 - extracts OutputStringToConsole from GetUserName method
  */
 
 
@@ -50,14 +50,34 @@ namespace COMP123_S2016_Lesson1B
         {
             // initialize Variable
             string UserName = "";
-            Console.Write("Enter User Name");
+            OutputStringToConsole("Enter User Name", false);
             UserName = Console.ReadLine();
-            
-            Console.WriteLine("/n=========================");
+
+            Console.WriteLine("\n=========================");
             Console.WriteLine("You Entered: " + UserName);
             return UserName;
         }
+        /**
+         * This method writes a string to console
+         * Choose to add new line character
+         * @parm {string} outputString
+         * @parm {bool} hasNewLine
+         * @parm {return} outputString
+         */
+        private static string OutputStringToConsole(string outputString, bool hasNewLine)
+        {
+            if (hasNewLine)
+            {
+                Console.WriteLine(outputString);
+
+            }
+            else
+            {
+                Console.Write(outputString);
+            }
+            return outputString;
 
 
+        }
     }
 }
