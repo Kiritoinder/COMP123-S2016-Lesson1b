@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Student ID: 300874118
  * Description: this is the lesson 1B for github
  * 
- * Version: 0.4 - extracts OutputStringToConsole from GetUserName method
+ * Version: 0.6 - Refactored using the ternary operator
  */
 
 
@@ -24,7 +24,7 @@ namespace COMP123_S2016_Lesson1B
      * @class program
      
      */
-    class Program
+   public class Program
     {
         /**
          * Main method for class program
@@ -50,7 +50,7 @@ namespace COMP123_S2016_Lesson1B
         {
             // initialize Variable
             string UserName = "";
-            OutputStringToConsole("Enter User Name", false);
+            OutputStringToConsole("Enter User Name", true);
             UserName = Console.ReadLine();
 
             Console.WriteLine("\n=========================");
@@ -64,8 +64,9 @@ namespace COMP123_S2016_Lesson1B
          * @parm {bool} hasNewLine
          * @parm {return} outputString
          */
-        private static string OutputStringToConsole(string outputString, bool hasNewLine)
+        public static string OutputStringToConsole(string outputString, bool hasNewLine)
         {
+            /**
             if (hasNewLine)
             {
                 Console.WriteLine(outputString);
@@ -74,7 +75,11 @@ namespace COMP123_S2016_Lesson1B
             else
             {
                 Console.Write(outputString);
-            }
+            } */
+
+            // refactored using the ternary operator
+           string suffixString = hasNewLine ?"\n": "";
+           Console.Write(outputString + suffixString);
             return outputString;
 
 
