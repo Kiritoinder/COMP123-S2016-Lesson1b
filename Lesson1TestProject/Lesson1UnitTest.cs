@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using COMP123_S2016_Lesson1B.program;
+using COMP123_S2016_Lesson1B;
 
 namespace Lesson1TestProject
 {
@@ -27,7 +27,7 @@ namespace Lesson1TestProject
             string expectedResult= "Enter Name: ";
 
             //Act
-            actualResult = COMP123_S2016_Lesson1B.Program.OutputStringToConsole(outputString, hasNewLine);
+            actualResult = Program.OutputStringToConsole(outputString, hasNewLine);
                 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);

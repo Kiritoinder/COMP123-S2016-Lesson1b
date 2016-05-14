@@ -66,18 +66,7 @@ namespace COMP123_S2016_Lesson1B
          */
         public static string OutputStringToConsole(string outputString, bool hasNewLine)
         {
-            /**
-            if (hasNewLine)
-            {
-                Console.WriteLine(outputString);
-
-            }
-            else
-            {
-                Console.Write(outputString);
-            } */
-
-            // refactored using the ternary operator
+             // refactored using the ternary operator
            string suffixString = hasNewLine ?"\n": "";
            Console.Write(outputString + suffixString);
             return outputString;
